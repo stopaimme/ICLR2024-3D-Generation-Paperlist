@@ -17,7 +17,7 @@ Recent advances in 3D content creation mostly leverage optimization-based 3D gen
 
 #### Pipeline
 
-![Pasted image 20240130164900](https://pic.imgdb.cn/item/65d4bd0f9f345e8d03256e8b.jpg)
+[![Pasted image 20240130164900](https://pic.imgdb.cn/item/65d4bd0f9f345e8d03256e8b.jpg)](https://github.com/stopaimme/images/blob/master/ICLR2024/Pasted%20image%2020240130164900.png?raw=true)
 
 #### Mesh Extraction
 

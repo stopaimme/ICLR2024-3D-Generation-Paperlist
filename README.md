@@ -17,16 +17,16 @@ Recent advances in 3D content creation mostly leverage optimization-based 3D gen
 
 #### Pipeline
 
-![Pasted image 20240130164900](ICLR2024 image\Pasted image 20240130164900.png)
+![Pasted image 20240130164900](https://pic.imgdb.cn/item/65d4bd0f9f345e8d03256e8b.jpg)
 
 #### Mesh Extraction
 
 **Marching cubes** (2D case as an example)
-![Pasted image 20240130185811](ICLR2024 image\Pasted image 20240130185811.png)
+![Pasted image 20240130185811](https://pic.imgdb.cn/item/65d4bcfb9f345e8d03251ca8.jpg)
 
 #### UV Mapping
 
-![Pasted image 20240130190225](ICLR2024 image\Pasted image 20240130190225.png)
+![Pasted image 20240130190225](https://pic.imgdb.cn/item/65d4bcf49f345e8d032502ee.jpg)
 
 ### <a id="LRM">LRM: Large Reconstruction Model for Single Image to 3D (8 8 8 10)</a>
 
@@ -44,13 +44,13 @@ We propose the first Large Reconstruction Model (LRM) that predicts the 3D model
 #### Pipeline
 
 Image → Image feature → Triplane tokens (Triplane Nerf)
-![Pasted image 20240130212144](ICLR2024 image\Pasted image 20240130212144.png)
+![Pasted image 20240130212144](https://pic.imgdb.cn/item/65d4bd059f345e8d0325488e.jpg)
 A fully trained large transformer decoder can convert a single image to its corresponding triplane
 
 **Ralated works:**
 
 * TensoRF: Tensorial Radiance Fields (ECCV2022, Triplane NeRF) [PAPER](https://arxiv.org/abs/2203.09517)
-* EG3D: Efficient Geometry-aware 3D Generative Adversarial Networks (CVPR2022, stylegan generator → image feature → triplane feature → volume rendering → stylegan discriminator) [PAPER](https://arxiv.org/pdf/2112.07945.pdf)!![Pasted image 20240131220609](ICLR2024 image\Pasted image 20240131220609.png)
+* EG3D: Efficient Geometry-aware 3D Generative Adversarial Networks (CVPR2022, stylegan generator → image feature → triplane feature → volume rendering → stylegan discriminator) [PAPER](https://arxiv.org/pdf/2112.07945.pdf)!![Pasted image 20240131220609](https://pic.imgdb.cn/item/65d4bce99f345e8d0324d785.jpg)
 
 ## <font color=#0abab5>Spotlight</font>
 
@@ -67,7 +67,7 @@ We propose DMV3D, a novel 3D generation approach that uses a transformerbased 3
 
 #### Pipeline
 
-![Pasted image 20240131221017](ICLR2024 image\Pasted image 20240131221017.png)
+![Pasted image 20240131221017](https://pic.imgdb.cn/item/65d4bcfe9f345e8d032527c4.jpg)
 Use <a href="#LRM">LRM</a> to replace the UNet of diffusion model.
 End-to-end training, during inference stage, once the multi-view images are fully denoised, our model offers a clean triplane NeRF, enabling 3D generation.
 
@@ -88,7 +88,7 @@ Diffusion models have emerged as a powerful method of generative modeling across
 
 #### Pipeline
 
-![Pasted image 20240218224703](ICLR2024 image\Pasted image 20240218224703.png)
+![Pasted image 20240218224703](https://pic.imgdb.cn/item/65d4bd0c9f345e8d032561dc.jpg)
 
 * Get a <font color=pink>CAD model</font> from the 3D shape repository(e.g., ShapeNet and Objaverse)
 * Render them from a variety of poses and viewing directions, then get the <font color=pink>canny edge</font> $\mathcal{E}_{3 \mathrm{D}}$ of the rendered image 
@@ -107,7 +107,7 @@ In this paper, we present a novel diffusion model called SyncDreamer that genera
 
 #### Pipeline
 
-![Pasted image 20240219203031](ICLR2024 image\Pasted image 20240219203031.png)
+![Pasted image 20240219203031](https://pic.imgdb.cn/item/65d4bcfe9f345e8d032525fe.jpg)
 
 * Given the noisy 4 images from target views, we can get a spatial volume to represent these 4 images
 * Pretrained zero123 model concatenates the input view $y$ with the noisy target view ${x_t}^{(n)}$ as the input to UNet. The viewpoint information $\Delta v^{(n)}$ and CLIP feature as the condition
@@ -130,9 +130,9 @@ We introduce MVDream, a multi-view diffusion model that is able to generate cons
 
 #### Pipeline
 
-![Pasted image 20240219205842](ICLR2024 image\Pasted image 20240219205842.png)
+![Pasted image 20240219205842](https://pic.imgdb.cn/item/65d4bcec9f345e8d0324e3ad.jpg)
 
-![Pasted image 20240219205854](ICLR2024 image\Pasted image 20240219205854.png)
+![Pasted image 20240219205854](https://pic.imgdb.cn/item/65d4bcec9f345e8d0324e37d.jpg)
 
 * Connecting all different views together and doing <font color=pink>3D self-attention</font> to generate consistent multi-view image at once
 * Add camera embeddings to time embeddings as residuals
@@ -151,10 +151,10 @@ We present “Magic123”, a two-stage coarse-to-fine approach for high-quality,
 
 #### Pipeline
 
-![Pasted image 20240219221404](ICLR2024 image\Pasted image 20240219221404.png)
+![Pasted image 20240219221404](https://pic.imgdb.cn/item/65d4bcf39f345e8d0324fec7.jpg)
 
 * In coarse stage, do SDS on both 2D diffusion model(SD) and 3D diffusion model(zero123)
-  ![Pasted image 20240219221727](ICLR2024 image\Pasted image 20240219221727.png)
+  ![Pasted image 20240219221727](https://pic.imgdb.cn/item/65d4bcde9f345e8d0324acfc.jpg)
 * In fine stage, do refinement on DMTet Mesh
   **Ralated works:**
 * Zero-1-to-3: Zero-shot One Image to 3D Object(ICCV2023) [Paper](https://openaccess.thecvf.com/content/ICCV2023/papers/Liu_Zero-1-to-3_Zero-shot_One_Image_to_3D_Object_ICCV_2023_paper.pdf)
@@ -172,9 +172,9 @@ Text-to-3D with diffusion models has achieved remarkable progress in recent year
 
 #### Pipeline
 
-![Pasted image 20240220113850](ICLR2024 image\Pasted image 20240220113850.png)
+![Pasted image 20240220113850](https://pic.imgdb.cn/item/65d4bcf99f345e8d03251613.jpg)
 
-![Pasted image 20240220113831](ICLR2024 image\Pasted image 20240220113831.png)
+![Pasted image 20240220113831](https://pic.imgdb.cn/item/65d4bd0d9f345e8d032565f4.jpg)
 
 * By dividing a picture into four Gaussian blobs, the 2D diffusion model can generate pictures from 4 viewpoints at once.
 * The architecture ot the Transformer-based reconstructor is just the same as <a href="#LRM">LRM</a>
@@ -190,7 +190,7 @@ We present DreamCraft3D, a hierarchical 3D content generation method that produc
 
 [📄Paper](https://arxiv.org/pdf/2310.16818.pdf) [🌐Project](https://mrtornado24.github.io/DreamCraft3D/) [💻Code](https://github.com/deepseek-ai/DreamCraft3D) #object_generation #diffusion #viewpoint_information #SDS #texture_refinement 
 
-![Pasted image 20240220130314](ICLR2024 image\Pasted image 20240220130314.png)
+![Pasted image 20240220130314](https://pic.imgdb.cn/item/65d4bd0c9f345e8d0325605f.jpg)
 
 * In coarse stage, do SDS on both 2D diffusion model and 3D diffusion model(zero123)
 * In refinement stage, finetune the diffusion model with the multi-view texture-augmented images, using [DreamBooth](https://openaccess.thecvf.com/content/CVPR2023/papers/Ruiz_DreamBooth_Fine_Tuning_Text-to-Image_Diffusion_Models_for_Subject-Driven_Generation_CVPR_2023_paper.pdf). And use this finetuned model to gradually optimize the textures (Hope the score function of the optimized 3D scene match the score function of the DreamBooth model)
@@ -211,9 +211,9 @@ It is inherently ambiguous to lift 2D results from pre-trained diffusion models 
 
 #### Pipeline
 
-![Pasted image 20240220172411](ICLR2024 image\Pasted image 20240220172411.png)
+![Pasted image 20240220172411](https://pic.imgdb.cn/item/65d4bd059f345e8d0325455a.jpg)
 
-![Pasted image 20240220172448](ICLR2024 image\Pasted image 20240220172448.png)
+![Pasted image 20240220172448](https://pic.imgdb.cn/item/65d4bd119f345e8d03257494.jpg)
 
 * In first stage, fine-tune a 2D diffusion model to generate viewpoint conditioned canonical coordinates maps(CCM)
 * In the SDS stage, render both CCM and rgb image from the 3D representation(Nerf or DMTet), and do use both orginal and fine-tuned 2D diffusion models to optimize the 3D reprensentation.
@@ -233,8 +233,8 @@ Text-to-3D generation has made remarkable progress recently, particularly with m
 
 In original SDS, the gradient is expressed as$\nabla_\theta \mathcal{L}_{\mathrm{SDS}}=\mathbb{E}_{t, \epsilon, \mathbf{c}}[w(t)(\epsilon_\phi(\mathbf{x}_t ; y, t)-\epsilon) \frac{\partial \mathbf{x}}{\partial \theta}]$
 And can be expressed as
-$\epsilon_{\phi}(\mathbf{x}_t ; y, t)-\epsilon =\delta_{x}(\mathbf{x}_{t} ; y, t) = \underbrace{[\epsilon_\phi(\mathbf{x}_t ; y, t)-\epsilon]}_{\delta_x^{\text {gen }}}+\omega \cdot \underbrace{[\epsilon_\phi(\mathbf{x}_t ; y, t)-\epsilon_\phi(\mathbf{x}_t ; t)]}_{\delta_x^{\text {cls }}}$
-![Pasted image 20240220211004](ICLR2024 image\Pasted image 20240220211004.png)
+$\epsilon_\phi(\mathbf{x}_t ; y, t)-\epsilon =\delta_x(\mathbf{x}_t ; y, t) = \underbrace{[\epsilon_\phi(\mathbf{x}_t ; y, t)-\epsilon]}_{\delta_x^{\text {gen }}}+\omega \cdot \underbrace{[\epsilon_\phi(\mathbf{x}_t ; y, t)-\epsilon_\phi(\mathbf{x}_t ; t)]}_{\delta_x^{\text {cls }}}$
+![Pasted image 20240220211004](https://pic.imgdb.cn/item/65d4bd029f345e8d032537b0.jpg)
 The authors find that
 
 * The gradient norm of the gen erative prior is several times larger than that of the classifier score in Fig(a)
@@ -255,6 +255,9 @@ Text-to-image diffusion models pre-trained on billions of image-text pairs have 
 
 #### Pipeline
 
-![Pasted image 20240220212231](ICLR2024 image\Pasted image 20240220212231.png)
+![Pasted image 20240220212231](https://pic.imgdb.cn/item/65d4bd1a9f345e8d032599ce.jpg)
 
-![Pasted image 20240220212243](ICLR2024 image\Pasted image 20240220212243.png)
+![Pasted image 20240220212243](https://pic.imgdb.cn/item/65d4bd119f345e8d032573b8.jpg)
+
+
+
